@@ -79,7 +79,8 @@ div[class^="section__"]:has([class^="customStatus__"]) {
 /**
  * Activity column in friends list
  */
-div[class^="nowPlayingColumn_"] {
+/* G: It's useful to know, on which servers my friends are active. However, only the VCs are important. Not the rest. */
+div[class^="nowPlayingColumn_"] div[class^="itemCard_"]:has(> div > header[class^="headerFull_"]) {
   display: none;
 }
 
